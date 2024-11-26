@@ -33,13 +33,10 @@ public class BookController {
     @Autowired
     private BookRepository bookRepository;
 
-    /**
-     * Endpoint para criar um novo livro.
-     * Apenas administradores podem acessar este endpoint.
-     */
+
     @Secured("ROLE_ADMIN")
     @Operation(summary = "Create a new book")
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Book> createBook(@RequestBody @Valid BookDto bookDto) {
         Book book = new Book();
         BeanUtils.copyProperties(bookDto, book);

@@ -54,9 +54,10 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public UserDetailsService customUserDetailsService() {
+    public CustomUserDetailsService anotherCustomUserDetailsService() {
         return new CustomUserDetailsService();
     }
+
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {

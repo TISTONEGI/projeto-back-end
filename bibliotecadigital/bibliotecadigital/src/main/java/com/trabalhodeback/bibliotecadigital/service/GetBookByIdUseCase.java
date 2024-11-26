@@ -16,7 +16,7 @@ public class GetBookByIdUseCase {
     private BookRepository bookRepository;
 
     public Book execute(UUID id) {
-        Optional<Book> optionalBook = bookRepository.findById(id);
+        Optional<Book> optionalBook = bookRepository.findById();
 
         if(optionalBook.isEmpty()){
             throw new BookNotFoundException();

@@ -58,8 +58,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return email; // Alterado para retornar o email como identificador padrão
-    }
+        return email; }
 
     @Override
     public String getPassword() {

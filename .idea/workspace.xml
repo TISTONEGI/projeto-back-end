@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5883b1b3-d356-4574-a1a4-9ffbb7576731" name="Changes" comment="" />
+    <list default="true" id="5883b1b3-d356-4574-a1a4-9ffbb7576731" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/service/GetBookByIdUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/service/GetBookByIdUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,22 +23,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2pOyhsgqOu7FjFT8tiyTFk6WzG1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Márcio Arystharco/Downloads/projeto-back-end"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Márcio Arystharco/Downloads/projeto-back-end&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
