@@ -1,5 +1,7 @@
 package com.trabalhodeback.bibliotecadigital.controller;
 
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,9 +27,11 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/books")
-@Tag(name = "Books", description = "Endpoints for managing books")
+@Tag(name = "book", description = "Endpoints for managing books")
 public class BookController {
 
     @Autowired
@@ -35,36 +39,48 @@ public class BookController {
 
 
     @Secured("ROLE_ADMIN")
-    @Operation(summary = "Create a new book")
-    @PostMapping()
-    public ResponseEntity<Book> createBook(@RequestBody @Valid BookDto bookDto) {
+    @Operation(
+            summary = "Create a new book",
+            description = "Creates a new book entry in the database.",
+            method = "POST"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Book created successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid input provided"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @PostMapping("/book")
+    public ResponseEntity<Book> createBook(@RequestBody BookDto bookDto) {
         Book book = new Book();
         BeanUtils.copyProperties(bookDto, book);
+
         Book savedBook = bookRepository.save(book);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(savedBook);
+
     }
 
-    /**
-     * Endpoint para buscar um livro pelo ID.
-     * Qualquer usuário autenticado pode acessar.
-     */
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
-    @Operation(summary = "Retrieve a book by ID")
-    @GetMapping("/{id}")
-    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
+
+    @GetMapping("/book/{id}")
+    public ResponseEntity<Book> getBookById(@PathVariable UUID id) {
         return bookRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    /**
-     * Endpoint para atualizar um livro pelo ID.
-     * Apenas administradores podem acessar este endpoint.
-     */
     @Secured("ROLE_ADMIN")
-    @Operation(summary = "Update a book by ID")
-    @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody @Valid BookDto bookDto) {
+    @Operation(
+            summary = "Update a book by ID",
+            description = "Updates an existing book entry by its ID."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Book updated successfully"),
+            @ApiResponse(responseCode = "404", description = "Book not found"),
+            @ApiResponse(responseCode = "400", description = "Invalid input provided"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @PutMapping("/book/{id}")
+    public ResponseEntity<Book> updateBook(@PathVariable UUID id, @RequestBody @Valid BookDto bookDto) {
         return bookRepository.findById(id)
                 .map(existingBook -> {
                     BeanUtils.copyProperties(bookDto, existingBook, "id");
@@ -74,14 +90,19 @@ public class BookController {
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    /**
-     * Endpoint para deletar um livro pelo ID.
-     * Apenas administradores podem acessar este endpoint.
-     */
+
     @Secured("ROLE_ADMIN")
-    @Operation(summary = "Delete a book by ID")
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
+    @Operation(
+            summary = "Delete a book by ID",
+            description = "Deletes a book entry from the database by its ID."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Book deleted successfully"),
+            @ApiResponse(responseCode = "404", description = "Book not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @DeleteMapping("/book/{id}")
+    public ResponseEntity<Void> deleteBook(@PathVariable UUID id) {
         if (bookRepository.existsById(id)) {
             bookRepository.deleteById(id);
             return ResponseEntity.noContent().build();
@@ -89,10 +110,6 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    /**
-     * Endpoint para listar livros com paginação.
-     * Qualquer usuário autenticado pode acessar.
-     */
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
     @Operation(summary = "List all books with pagination")
     @GetMapping

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5883b1b3-d356-4574-a1a4-9ffbb7576731" name="Changes" comment="">
+    <list default="true" id="5883b1b3-d356-4574-a1a4-9ffbb7576731" name="Changes" comment="up-3">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/controller/Operation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/service/GetBookByIdUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/java/com/trabalhodeback/bibliotecadigital/service/GetBookByIdUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotecadigital/bibliotecadigital/src/main/resources/application.properties" afterDir="false" />
@@ -48,6 +46,19 @@
       <option name="presentableId" value="Default" />
       <updated>1732651540397</updated>
     </task>
+    <task id="LOCAL-00001" summary="up-3">
+      <option name="closed" value="true" />
+      <created>1732658656261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732658656261</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="up-3" />
+    <option name="LAST_COMMIT_MESSAGE" value="up-3" />
   </component>
 </project>

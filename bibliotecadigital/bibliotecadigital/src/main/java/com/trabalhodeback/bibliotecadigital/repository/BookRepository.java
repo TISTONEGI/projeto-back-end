@@ -9,13 +9,13 @@ import org.springframework.stereotype.Repository;
 import com.trabalhodeback.bibliotecadigital.model.Book;
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface BookRepository extends JpaRepository<Book, UUID> {
     
 
-    Optional<Book> findByTitle(String titulo);
+    Optional<Book> findByTitulo(String titulo);
 
    
-    boolean existsByTitle(String titulo);
+    boolean existsByTitulo(String titulo);
 
-    Optional<Book> findById();
+
 }
